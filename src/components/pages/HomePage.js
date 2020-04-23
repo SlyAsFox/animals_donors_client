@@ -15,7 +15,6 @@ class App extends Component {
     render() {
         return (
             <div className="HomePage">
-                <img src={logo} alt={"logo"} className={'logo'}/>
                 <Menu/>
                 <div className={"text"}>
                     <h3>Донорство крови среди животных — кровь вашего питомца очень нужна</h3>

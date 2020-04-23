@@ -1,6 +1,8 @@
 import {Component} from "react";
 import React from "react";
 import DynamicSelect from '../DynamicSelect'
+import Menu from '../Menu';
+import Table from '../Table';
 
 const arrayOfData1 = [
     {
@@ -71,9 +73,11 @@ class DonationsPage extends Component {
             select2Value: selectedValue
         });
     };
+
     render() {
         return (
             <div className="DonationsPage">
+                <Menu/>
                 <h1>Donations</h1>
                 <h5>Вивести інформацію про здачі крові(дата здачі, кінцевий термін зберігання, донор, лікар) за кількістю потрібної крові та групою.</h5>
 
@@ -85,6 +89,7 @@ class DonationsPage extends Component {
                 <div>
                     Selected value: {this.state.select1Value} & {this.state.select2Value}
                 </div>
+                <Table/>
             </div>
         );
     }

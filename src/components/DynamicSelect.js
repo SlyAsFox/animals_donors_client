@@ -10,7 +10,7 @@ class DynamicSelect extends Component{
     {
         let selectedValue = event.target.value;
         this.props.onSelectChange(selectedValue);
-    }
+    };
 
     render(){
         let arrayOfData = this.props.arrayOfData;

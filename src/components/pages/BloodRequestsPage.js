@@ -2,7 +2,6 @@ import Menu from '../Menu';
 import {Component} from "react";
 import React from "react";
 import DynamicSelect from '../DynamicSelect'
-import BloodBanksPage from "./BloodBanksPage";
 
 const arrayOfData1 = [
     {
@@ -76,6 +75,7 @@ class BloodRequestsPage extends Component {
     render() {
         return (
             <div className="BloodRequestsPage">
+                <Menu/>
                 <h1>Blood Requests</h1>
                 <h5>Вивести інформацію про заявки на кров (група, кількість) за певною датою створення та хворобою.</h5>
 

@@ -1,6 +1,7 @@
 import {Component} from "react";
 import React from "react";
 import DynamicSelect from '../DynamicSelect'
+import Menu from '../Menu';
 
 const arrayOfData1 = [
     {
@@ -74,6 +75,7 @@ class StaffPage extends Component {
     render() {
         return (
             <div className="StaffPage">
+                <Menu/>
                 <h1>Staff</h1>
                 <h5>Вивести інформацію про співробітників клінік (ПІБ, дата народження, номер телефону, адреса, електронна адреса) за певною посадою та статтю.</h5>
 

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import { Typography, Link } from '@material-ui/core';
+import { Typography, Link } from '@material-ui/core'
+import logo from '../images/logo.png'
 import styles from '../styles/Menu.css';
 
 class Menu extends Component{
@@ -10,33 +11,34 @@ class Menu extends Component{
     render(){
         return (
             <div>
+                {/*<img src={logo} alt={"logo"} className={'logo'}/>*/}
                 <Typography className="Menu">
-                    <Link href="#" className="link">
-                        Table1
+                    <Link href="/" className="link">
+                        <img src={logo} alt={"logo"} className={'logo'}/>
                     </Link>
-                    <Link href="#" className="link">
-                        Table2
+                    <Link href="/animals" className="link">
+                        Animals
                     </Link>
-                    <Link href="#" className="link">
-                        Table3
+                    <Link href="/bloodBanks" className="link">
+                        Blood Banks
                     </Link>
-                    <Link href="#" className="link">
-                        Table4
+                    <Link href="/bloodRequests" className="link">
+                        Blood Requests
                     </Link>
-                    <Link href="#" className="link">
-                        Table5
+                    <Link href="/clinics" className="link">
+                        Clinics
                     </Link>
-                    <Link href="#" className="link">
-                        Table6
+                    <Link href="/donations" className="link">
+                        Donations
                     </Link>
-                    <Link href="#" className="link">
-                        Table7
+                    <Link href="/medicalChecks" className="link">
+                        Medical Checks
                     </Link>
-                    <Link href="#" className="link">
-                        Table8
+                    <Link href="/staff" className="link">
+                        Staff
                     </Link>
-                    <Link href="#" className="link">
-                        Table9
+                    <Link href="/users" className="link">
+                        Users
                     </Link>
                 </Typography>
             </div>

@@ -1,6 +1,7 @@
 import {Component} from "react";
 import React from "react";
 import DynamicSelect from '../DynamicSelect'
+import Menu from '../Menu';
 
 const arrayOfData1 = [
     {
@@ -74,6 +75,7 @@ class UsersPage extends Component {
     render() {
         return (
             <div className="UsersPage">
+                <Menu/>
                 <h1>Users</h1>
                 <h5>Вивести інформацію про користувачів (ПІБ, місто проживання, стать, дата народження, номер телефону) за певною електронною адресою та мають більше 1 тварини.</h5>
 
