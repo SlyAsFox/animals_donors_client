@@ -4,60 +4,17 @@ import DynamicSelect from '../DynamicSelect'
 import axios from "axios";
 import Menu from '../Menu';
 import '../../styles/Animals.css';
-
-let arrayOfData1 = [
-    {
-        id: 'All',
-        name: 'All'
-    },
-    {
-        id: 'Jerry',
-        name: 'Jerry'
-    },
-    {
-        id: 'Elaine',
-        name: 'Elaine'
-    },
-    {
-        id: 'Kramer',
-        name: 'Kramer'
-    },
-    {
-        id: 'George',
-        name: 'George'
-    }
-];
-
-const arrayOfData2 = [
-    {
-        id: 'All',
-        name: 'All'
-    },
-    {
-        id: 'Jerry',
-        name: 'Jerry'
-    },
-    {
-        id: 'Elaine',
-        name: 'Elaine'
-    },
-    {
-        id: 'Kramer',
-        name: 'Kramer'
-    },
-    {
-        id: 'George',
-        name: 'George'
-    }
-];
+import Table from "../tables/AnimalsTable";
 
 class AnimalsPage extends Component {
     constructor(props){
         super(props);
         this.state = {
-            breeds: []
+            breeds: [],
+            types: []
         }
     }
+
 
     handleSelect1Change = (selectedValue) => {
         this.setState({
@@ -71,47 +28,37 @@ class AnimalsPage extends Component {
         });
     };
 
-    // getBreeds = () => {
-    //     axios.get(`http://localhost:5000/api/v1/animals/breeds`)
-    //         .then((response) => {
-    //             console.log(response.data);
-    //             return response.data
-    //         })
-    //         // .then((response) => {
-    //             // let breedArr = [];
-    //             // for(let breed of response.data){
-    //             //     breedArr.push({
-    //             //         id: breed,
-    //             //         name: breed
-    //             //     })
-    //             // }
-    //         // })
-    //         .catch(function (error) {
-    //             // handle error
-    //             console.log(`[getBreeds]: ${error}`);
-    //         });
-    // };
-
     componentDidMount() {
         axios.get(`http://localhost:5000/api/v1/animals/breeds`)
             .then((response) => {
                 const breeds = [];
-                response.data.forEach((breed, key ) => {
+                response.data.forEach((breed) => {
                     breeds.push({
-                        id: key,
+                        id: breed,
                         name: breed
                     })
                 });
                 this.setState({
                     breeds: breeds
                 })
+            });
+
+        axios.get(`http://localhost:5000/api/v1/animals/types`)
+            .then((response) => {
+                const types = [];
+                response.data.forEach((type) => {
+                    types.push({
+                        id: type,
+                        name: type
+                    })
+                });
+                this.setState({
+                    types: types
+                })
             })
     }
 
-    arr = ['1', '2'];
-
     render() {
-        // console.log(this.state.breeds);
         return (
             <div className="AnimalsPage">
                 <Menu />
@@ -119,18 +66,19 @@ class AnimalsPage extends Component {
                 <h5>Вивести інформацію про тварин (Ім’я, дата народження, колір, стать), що належать до певного виду та породи.</h5>
 
                 <div className={'selects'}>
-                    <DynamicSelect className={'select1'} arrayOfData={this.state.breeds} onSelectChange={this.handleSelect1Change}/>
-                    <DynamicSelect className={'select2'} arrayOfData={arrayOfData2} onSelectChange={this.handleSelect2Change} />
+                    <DynamicSelect className={'select1'} arrayOfData={this.state.types} onSelectChange={this.handleSelect1Change}/>
+                    <DynamicSelect className={'select2'} arrayOfData={this.state.breeds} onSelectChange={this.handleSelect2Change} />
                 </div>
                 <br /><br />
 
                 <div>
-                    {this.state.breeds.map( (breed, key) => {
-                        return <p key={key}>{breed.name}</p>
-                    })}
+                    {/*{this.state.breeds.map( (breed, key) => {*/}
+                        {/*return <p key={key}>{breed.name}</p>*/}
+                    {/*})}*/}
                     {/*<p>breeds: {this.state.breeds}</p>*/}
                     Selected value: {this.state.select1Value} & {this.state.select2Value}
                 </div>
+                <Table/>
             </div>
         );
     }
