@@ -2,7 +2,7 @@ import {Component} from "react";
 import React from "react";
 import DynamicSelect from '../DynamicSelect'
 import Menu from '../Menu';
-import Table from '../Table';
+import Table from '../tables/AnimalsTable';
 
 const arrayOfData1 = [
     {
