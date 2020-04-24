@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Typography, Link } from '@material-ui/core'
 import logo from '../images/AD.png'
-import styles from '../styles/Menu.css';
+import '../styles/Menu.css';
 
 class Menu extends Component{
     constructor(props){
