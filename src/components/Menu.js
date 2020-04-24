@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Typography, Link } from '@material-ui/core'
-import ad from '../images/ad.png'
+import logo from '../images/AD.png'
 import styles from '../styles/Menu.css';
 
 class Menu extends Component{
@@ -13,7 +13,7 @@ class Menu extends Component{
             <div>
                 <Typography className="Menu">
                     <Link href="/">
-                        <img src={ad} alt={"logo"} className={'logo'}/>
+                        <img src={logo} alt={"logo"} className={'logo'}/>
                     </Link>
                     <Link href="/animals" className="link">
                         Animals
