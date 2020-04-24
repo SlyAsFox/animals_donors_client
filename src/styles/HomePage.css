@@ -1,0 +1,17 @@
+.HomePage{
+    display: flex;
+    flex-direction: column;
+}
+
+h3{
+    text-align: center;
+}
+
+.image1{
+    padding: 2% 22%;
+}
+
+.text{
+    padding: 2% 15%;
+    text-align: justify;
+}

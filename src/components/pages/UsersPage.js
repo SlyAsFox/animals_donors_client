@@ -2,6 +2,7 @@ import {Component} from "react";
 import React from "react";
 import DynamicSelect from '../DynamicSelect'
 import Menu from '../Menu';
+import '../../styles/Users.css';
 
 const arrayOfData1 = [
     {

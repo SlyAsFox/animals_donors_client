@@ -3,6 +3,7 @@ import {Component} from "react";
 import React from "react";
 import logo from "../../images/logo.png";
 import image1 from "../../images/image1.png";
+import '../../styles/HomePage.css';
 
 class App extends Component {
     constructor(props){
@@ -16,9 +17,9 @@ class App extends Component {
         return (
             <div className="HomePage">
                 <Menu/>
-                <div className={"text"}>
+                <div className="text">
                     <h3>Донорство крови среди животных — кровь вашего питомца очень нужна</h3>
-                    <img src={image1} alt={"logo"} className={'image1'}/>
+                    <img src={image1} alt={"logo"} className='image1'/>
                     <p>Донорами могут стать не только люди, но и кошки с собаками. Как и у людей, у животных порой необходимо донорство. Эта процедура спасает многих кошек и собак, продлевает их жизнь на радость хозяев.</p>
                     <p>Мы часто слышим, что доноров крови не хватает, а можете себе представить, как тяжело найти подходящего донора для своего питомца? Многие люди просто не знают о такой возможности.</p>
                     <h4>Какие животные могут стать донорами?</h4>

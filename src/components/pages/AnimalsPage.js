@@ -3,6 +3,7 @@ import React from "react";
 import DynamicSelect from '../DynamicSelect'
 import axios from "axios";
 import Menu from '../Menu';
+import '../../styles/Animals.css';
 import Table from "../tables/AnimalsTable";
 
 class AnimalsPage extends Component {
